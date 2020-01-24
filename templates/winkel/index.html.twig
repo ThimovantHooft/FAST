@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Winkel index{% endblock %}
+
+{% block body %}
+
+    <h1 style="text-align: center">Winkels</h1>
+    <div style="text-align: left;
+  margin-bottom: 2rem;" >
+        <button type="button"  class="btn btn-info"><a  style="color: white" href=http://127.0.0.1:8000/>Terug</a></button>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Besch</th>
+                <th>Email</th>
+                <th>Adress</th>
+                <th>Tel</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for winkel in winkels %}
+            <tr>
+                <td>{{ winkel.id }}</td>
+                <td>{{ winkel.name }}</td>
+                <td>{{ winkel.besch }}</td>
+                <td>{{ winkel.email }}</td>
+                <td>{{ winkel.adress }}</td>
+                <td>{{ winkel.tel }}</td>
+                <td>
+                    <button type="button"  class="btn btn-info"><a  style="color: white" href="{{ path('winkel_show', {'id': winkel.id}) }}">more info</a></button>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

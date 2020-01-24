@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Winkel{% endblock %}
+
+{% block body %}
+    <h1>Edit Winkel</h1>
+
+    {{ include('winkel/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('winkel_index') }}">back to list</a>
+
+    {{ include('winkel/_delete_form.html.twig') }}
+{% endblock %}

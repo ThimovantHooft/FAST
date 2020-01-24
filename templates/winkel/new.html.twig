@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Winkel{% endblock %}
+
+{% block body %}
+    <h1>Create new Winkel</h1>
+
+    {{ include('winkel/_form.html.twig') }}
+
+    <a href="{{ path('winkel_index') }}">back to list</a>
+{% endblock %}

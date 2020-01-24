@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Uitje{% endblock %}
+
+{% block body %}
+    <h1>Create new Uitje</h1>
+
+    {{ include('uitje/_form.html.twig') }}
+
+    <a href="{{ path('uitje_index') }}">back to list</a>
+{% endblock %}

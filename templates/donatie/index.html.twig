@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Donatie index{% endblock %}
+
+{% block body %}
+    <h1>Donatie index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for donatie in donaties %}
+            <tr>
+                <td>{{ donatie.id }}</td>
+                <td>
+                    <a href="http://127.0.0.1:8000/regel">Voeg producten toe</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <button type="button" class="btn btn-info"><a style="color: white;" href="{{ path('donatie_new') }}">Create new</a></button>
+{% endblock %}
