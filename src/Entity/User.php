@@ -20,7 +20,7 @@ class User
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=30, unique=true)
+     * @ORM\Column(type="string", length=30)
      */
     private $username;
 
@@ -30,7 +30,7 @@ class User
     private $password;
 
     /**
-     * @ORM\Column(type="string", length=255, unique=true)
+     * @ORM\Column(type="string", length=255 ,unique=true)
      */
     private $email;
 
@@ -49,10 +49,6 @@ class User
      */
     private $points;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $isActive;
 
     /**
      * @OneToMany(targetEntity="Donatie", mappedBy="user")
@@ -141,17 +137,6 @@ class User
         return $this;
     }
 
-    public function getIsActive(): ?bool
-    {
-        return $this->isActive;
-    }
-
-    public function setIsActive(bool $isActive): self
-    {
-        $this->isActive = $isActive;
-
-        return $this;
-    }
 
     /**
      * @return Collection|Donatie[]

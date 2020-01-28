@@ -1,0 +1,105 @@
+{% extends 'base.html.twig' %}
+{% block title %}Food-swap FAQ{% endblock %}
+{% block body %}
+<div class="cotainer">
+    <h1 style="text-align: center;
+margin-top: 2rem
+" class="display-2">FAQ</h1>
+
+
+    <div style="margin: 5%" class="accordion" id="accordionExample">
+{#//vraag 1#}
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Hoeveel punten krijg ik per ingeleverd product?
+                    </button>
+                </h2>
+            </div>
+{#antwoord vraag 1#}
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    -   Dat hangt af van de donatie. De medewerker van de Voedselbank beoordeeld of er een “volledige” donatie is gedaan; je kunt ervanuit gaan dat een “volledige” maaltijd bestaat uit minimaal 3 voedselelementen.                </div>
+            </div>
+        </div>
+
+
+{#vraag2#}
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Wanneer kan ik mijn punten inleveren?
+                    </button>
+                </h2>
+            </div>
+{#antwoord vraag 2#}
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    -	Wanneer je genoeg punten hebt voor een van de beschikbare uitjes, is het mogelijk om je punten in te leveren in ruil voor een uitje.
+                </div>
+            </div>
+        </div>
+{#vraag 3#}
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Waar zijn alle inleverpunten?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    -	De beschikbare inleverpunten staan weergegeven onder “Contact” en dan “Onze Winkels”. Hier staat de meest dichtstbijzijnde locatie van de Voedselbank.                 </div>
+            </div>
+        </div>
+{#    4#}
+    <div class="card">
+        <div class="card-header" id="headingfour">
+            <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                    Krijg ik ook punten voor het doneren van geld?
+                </button>
+            </h2>
+        </div>
+        <div id="collapsefour" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+                -	Nee, zodra de keuze voor een donatie wordt gemaakt, is het niet mogelijk hier punten voor te kunnen ontvangen.        </div>
+        </div>
+    </div>
+{#        5#}
+        <div class="card">
+            <div class="card-header" id="headingfive">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                        Ik heb mijn punten niet ontvangen maar wel een donatie gedaan, wat nu?                    </button>
+                </h2>
+            </div>
+            <div id="collapsefive" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    -	Hiervoor is het zaak om de medewerker die op dat moment aanwezig is aan te spreken. Die kan jou verder helpen.            </div>
+        </div>
+{#            6#}
+    <div class="card">
+        <div class="card-header" id="headingsix">
+            <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                    Kan ik bij verschillende voedselbanken voedsel doneren?                </button>
+            </h2>
+        </div>
+        <div id="collapsesix" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+                -	Ja, dat kan zeker.             </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+<div style="text-align: center">
+    <a class="btn btn-info" href="http://127.0.0.1:8000/">Terug naar home</a>
+</div>
+</div>
+
+{% endblock %}

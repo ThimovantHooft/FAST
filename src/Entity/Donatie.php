@@ -38,6 +38,11 @@ class Donatie
      */
     private $regel;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $donatienaam;
+
     public function __construct()
     {
         $this->regel = new ArrayCollection();
@@ -106,6 +111,18 @@ class Donatie
     public function __toString()
     {
         return strval( $this->id ) ;
+    }
+
+    public function getDonatienaam(): ?string
+    {
+        return $this->donatienaam;
+    }
+
+    public function setDonatienaam(string $donatienaam): self
+    {
+        $this->donatienaam = $donatienaam;
+
+        return $this;
     }
 
 }

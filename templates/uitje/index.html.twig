@@ -3,43 +3,42 @@
 {% block title %}Uitje index{% endblock %}
 
 {% block body %}
-    <div style="text-align: center"><h1>Uitjes</h1></div>
-    <div style="text-align: left;
-  margin-bottom: 2rem;
-         margin-left: 2rem;">
-    <button type="button"  class="btn btn-info"><a  style="color: white" href=http://127.0.0.1:8000/>Terug</a></button>
+    <div class="container">
+        <div  style="text-align: center;
+margin: 4rem"><h1 class="display-2">Uitjes</h1></div>
+
+
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th >Name</th>
+                    <th >Besch</th>
+                    <th>Prijs</th>
+                    <th ></th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for uitje in uitjes %}
+                <tr>
+                    <td>{{ uitje.name }}</td>
+                    <td>{{ uitje.besch }}</td>
+                    <td>{{ uitje.prijs }}</td>
+                    <td>
+                        <button type="button"  class="btn btn-sm btn-info"><a  style="color: white" href="{{ path('uitje_show', {'id': uitje.id}) }}">more info</a></button>
+                        <button type="button" class="btn btn-sm btn-secondary">kies mij</button>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="6">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div style="text-align: left;
+      margin-bottom: 2rem;
+             margin-left: 2rem;">
+            <button type="button"  class="btn btn-info"><a  style="color: white" href=http://127.0.0.1:8000/>Terug naar main menu</a></button>
+        </div>
     </div>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Besch</th>
-                <th>Email</th>
-                <th>Prijs</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for uitje in uitjes %}
-            <tr>
-                <td>{{ uitje.id }}</td>
-                <td>{{ uitje.name }}</td>
-                <td>{{ uitje.besch }}</td>
-                <td>{{ uitje.email }}</td>
-                <td>{{ uitje.prijs }}</td>
-                <td>
-                    <button type="button"  class="btn btn-sm btn-info"><a  style="color: white" href="{{ path('uitje_show', {'id': uitje.id}) }}">more info</a></button>
-                    <button type="button" class="btn btn-sm btn-secondary">kies mij</button>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
 {% endblock %}

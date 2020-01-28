@@ -1,40 +1,56 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Food-swap!!{% endblock %}
 
 {% block body %}
+    <div class="container">
+        <h1 class="display-1" style="text-align: center;
+  margin-bottom: 5rem;
+    margin-top: 3rem;
 
-<h1 style="text-align: center;
-  margin-bottom: 1rem;
 ">Foodswap</h1>
 
-    <div class="container">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Uitjes</h5>
-                <h6 class="card-subtitle mb-2 text-muted">uitjes</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <button  type="button" class="btn btn-info"><a  style="color: white"href="http://127.0.0.1:8000/uitje" class="card-link">Uitjes</a></button>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Doneer</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <button type="button" class="btn btn-success"><a style="color: white" href="http://127.0.0.1:8000/donatie" class="card-link">Doneer</a></button>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">winkels</h5>
-                <h6 class="card-subtitle mb-2 text-muted">winkels</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <button type="button" class="btn btn-info"><a style="color: white;" href="http://127.0.0.1:8000/winkel" class="">Winkel</a></button>
-            </div>
-        </div>
 
+        <div style="text-align: center" class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div  style="height: 200px" class="card-body">
+                        <h4 style="text-align: center" class="card-title">uitjest</h4>
+                        <p class="card-text">Om te zien wat voorn uitjes er Zijn. En voor meer informatie er over.</p>
+                        <a href="{{ path('uitje_index') }}" class="btn btn-info">Doneer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div style="text-align:center"  class="card">
+                    <div style="height: 200px" class="card-body">
+                        <h3 class="card-title">Donatie</h3>
+                        <p class="card-text">Maak nu zelf een donatie.</p>
+                        <a style="margin-top: 5%" href="{{ path('donatie_index') }}" class="btn btn-success">Doneer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div  class="card">
+                    <div style="height: 200px"  class="card-body">
+                        <h4 style="text-align: center" class="card-title">Winkels</h4>
+                        <p class="card-text">voor meer info over de winkels en waar je donaties kan maken klik hier onder.</p>
+                        <a href="{{ path('winkel_index') }}" class="btn btn-info">Winkels</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 25% "class="row">
+            <div class="col">
+                <h6>Meer Info</h6>
+             <ul>
+                 <li><a href="http://127.0.0.1:8000/info" class="link">info over ons</a></li>
+                 <li><a href="http://127.0.0.1:8000/faq" class="">FAQ</a></li>
+                 <li>mijn info</li>
+             </ul>
+            </div>
 
+        </div>
     </div>
 
 {% endblock %}
